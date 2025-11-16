@@ -34,7 +34,7 @@ function playGame() {
         let guess = +prompt(`The number must between 1-100. Left ${attemptsLeft} attempts.`, "");
 
         if (isInvalidInput(guess)) {
-            attemptsLeft++; //tahmin geçerli bir değerde olmadığı için bir hakkını geri veriyoruz
+            attemptsLeft++; 
             continue inner;
         };
 
