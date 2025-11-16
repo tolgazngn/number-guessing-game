@@ -3,6 +3,18 @@
 const MAX_ATTEMPTS = 5;
 let randomNumber;
 
+//main
+
+showWelcomeMessage();
+
+while (true) {
+    playGame();
+
+    let playAgain = confirm("Do you want to play again?");
+
+    if (!playAgain) break;
+}
+
 //functions
 function showWelcomeMessage() {
     alert(`Welcome to Number Guessing Game!\nYou have just ${MAX_ATTEMPTS} attempts.`);
@@ -43,7 +55,9 @@ function playGame() {
         }
     }
 
-    if (won == false) { alert(`Sorry, the number was ${randomNumber}.`); }
+    if (won == false) { 
+      alert(`Sorry, the number was ${randomNumber}.`); 
+    }
 }
 
 function isInvalidInput(value) {
@@ -52,16 +66,4 @@ function isInvalidInput(value) {
 
 function isOutOfRange(value) {
     return value < 1 || value > 100;
-}
-
-//main
-
-showWelcomeMessage();
-
-while (true) {
-    playGame();
-
-    let playAgain = confirm("Do you want to play again?");
-
-    if (!playAgain) break;
 }
